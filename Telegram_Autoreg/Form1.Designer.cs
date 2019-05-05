@@ -45,9 +45,11 @@
             this.start_button = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Accounts_table = new System.Windows.Forms.DataGridView();
+            this.SetRandomUsername_box = new System.Windows.Forms.CheckBox();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.F_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.S_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,6 +89,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SetRandomUsername_box);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Count_accounts);
             this.groupBox1.Controls.Add(this.Use_Proxy_CheckBox);
@@ -95,7 +98,7 @@
             this.groupBox1.Controls.Add(this.First_names_upload_button);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(143, 152);
+            this.groupBox1.Size = new System.Drawing.Size(143, 175);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
@@ -124,9 +127,9 @@
             this.Use_Proxy_CheckBox.Enabled = false;
             this.Use_Proxy_CheckBox.Location = new System.Drawing.Point(6, 129);
             this.Use_Proxy_CheckBox.Name = "Use_Proxy_CheckBox";
-            this.Use_Proxy_CheckBox.Size = new System.Drawing.Size(74, 17);
+            this.Use_Proxy_CheckBox.Size = new System.Drawing.Size(73, 17);
             this.Use_Proxy_CheckBox.TabIndex = 6;
-            this.Use_Proxy_CheckBox.Text = "Use Proxy";
+            this.Use_Proxy_CheckBox.Text = "Use proxy";
             this.Use_Proxy_CheckBox.UseVisualStyleBackColor = true;
             // 
             // Avatars_upload_button
@@ -142,7 +145,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Autoreg_log);
-            this.groupBox2.Location = new System.Drawing.Point(12, 170);
+            this.groupBox2.Location = new System.Drawing.Point(12, 193);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(143, 156);
             this.groupBox2.TabIndex = 8;
@@ -155,7 +158,7 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.api_key);
             this.groupBox3.Controls.Add(this.sms_service);
-            this.groupBox3.Location = new System.Drawing.Point(12, 332);
+            this.groupBox3.Location = new System.Drawing.Point(6, 355);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(143, 98);
             this.groupBox3.TabIndex = 9;
@@ -201,9 +204,9 @@
             // 
             // start_button
             // 
-            this.start_button.Location = new System.Drawing.Point(194, 397);
+            this.start_button.Location = new System.Drawing.Point(194, 430);
             this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(290, 23);
+            this.start_button.Size = new System.Drawing.Size(366, 23);
             this.start_button.TabIndex = 10;
             this.start_button.Text = "START";
             this.start_button.UseVisualStyleBackColor = true;
@@ -214,7 +217,7 @@
             this.groupBox4.Controls.Add(this.Accounts_table);
             this.groupBox4.Location = new System.Drawing.Point(194, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(290, 379);
+            this.groupBox4.Size = new System.Drawing.Size(366, 412);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Accounts";
@@ -225,12 +228,23 @@
             this.Accounts_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Phone,
             this.F_Name,
-            this.S_Name});
+            this.S_Name,
+            this.Username});
             this.Accounts_table.Location = new System.Drawing.Point(6, 15);
             this.Accounts_table.Name = "Accounts_table";
             this.Accounts_table.RowHeadersVisible = false;
-            this.Accounts_table.Size = new System.Drawing.Size(284, 357);
+            this.Accounts_table.Size = new System.Drawing.Size(354, 391);
             this.Accounts_table.TabIndex = 0;
+            // 
+            // SetRandomUsername_box
+            // 
+            this.SetRandomUsername_box.AutoSize = true;
+            this.SetRandomUsername_box.Location = new System.Drawing.Point(6, 152);
+            this.SetRandomUsername_box.Name = "SetRandomUsername_box";
+            this.SetRandomUsername_box.Size = new System.Drawing.Size(129, 17);
+            this.SetRandomUsername_box.TabIndex = 8;
+            this.SetRandomUsername_box.Text = "Set random username";
+            this.SetRandomUsername_box.UseVisualStyleBackColor = true;
             // 
             // Phone
             // 
@@ -250,12 +264,17 @@
             this.S_Name.HeaderText = "Surname";
             this.S_Name.Name = "S_Name";
             // 
+            // Username
+            // 
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(496, 442);
+            this.ClientSize = new System.Drawing.Size(572, 465);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.start_button);
             this.Controls.Add(this.groupBox3);
@@ -292,11 +311,13 @@
         private System.Windows.Forms.DataGridView Accounts_table;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Count_accounts;
+        private System.Windows.Forms.Label Balance_Text;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox SetRandomUsername_box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn F_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn S_Name;
-        private System.Windows.Forms.Label Balance_Text;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
     }
 }
 

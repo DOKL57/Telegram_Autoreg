@@ -148,7 +148,7 @@ namespace Telegram_Autoreg
 
         public void sms_activate_RegisterAccount(string NotNumberAtAll, string name, string surname, string key, string id)
         {
-            
+            string tg_username = GenerateRandomUsername();
             char[] NF = NotNumberAtAll.ToCharArray();
 
             if (File.Exists(Directory.GetCurrentDirectory() + @"\telegram\Telegram.exe")){ } else { MessageBox.Show("Telegram.exe not found"); }
@@ -159,7 +159,7 @@ namespace Telegram_Autoreg
             IntPtr hWindow = FindWindow(null, "Telegram");
             MoveWindow(hWindow, 0, 0, 600, 600, true);
 
-            Sleep(2000);
+            Sleep(1500);
             MoveWindow(hWindow, 0, 0, 600, 600, true);
             Sleep(1000);
             LeftClick(300, 425, 1000);
@@ -216,17 +216,24 @@ namespace Telegram_Autoreg
                     Sleep(1000);
                     LeftClick(300, 400, 0);
                     NotNumberAtAll = "+7" + NotNumberAtAll;
-                    Accounts_table.Rows.Add(NotNumberAtAll, name, surname);
+                    Accounts_table.Rows.Add(NotNumberAtAll, name, surname, tg_username);
                     int n = 1;
                     Time_log(("Account № " + n.ToString() + " registered"));
                     ++n;
                     LeftClick(300, 410, 0);
                     LeftClick(300, 400, 1000);
 
+
+                    if (SetRandomUsername_box.Checked)
+                    {
+                        Time_log("set username");
+                        SetRandomUsername(tg_username);
+                    }
                     if (avatars.Count != 0)
                     {
                         Sleep(2000);
                         SetAvatar();
+                        Time_log("set avatar");
                     }
                     System.Threading.Thread.Sleep(2000);
 
@@ -249,6 +256,43 @@ namespace Telegram_Autoreg
                 }
             }
         }
+
+        public void SetRandomUsername(string username)
+        {
+
+            LeftClick(25, 50, 500);
+            LeftClick(100, 360, 500);
+            LeftClick(250, 255, 500);
+            LeftClick(230, 439, 500);
+            SendKeys.SendWait(username);
+            LeftClick(415,500,1000);
+            LeftClick(550, 400, 500);
+
+        }
+
+        public string GenerateRandomUsername()
+        {
+            string tg_username = "";
+            var random = new Random();
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+            if(SetRandomUsername_box.Checked) //not checked
+            {
+                int r = (random.Next(15, 32));
+                for (int i = 1; i <= r; i++)
+                {
+                    string username_letter = (alphabet[random.Next(alphabet.Length)]).ToString();
+                    tg_username += username_letter;
+                }
+                return tg_username;
+            }
+            else //checked
+            {
+                return "none";
+            }
+        }
+
+
         int n = 2;
         public void MoveTelegram()
         {
