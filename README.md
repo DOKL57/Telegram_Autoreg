@@ -19,21 +19,21 @@ If you want to build a solution yourself
 ## Usage
 * Choose txt first names list and second names list by relevant buttons 
 * Choose folder with avatars by "avatars folder" button if you want to add avatars to new accounts
+* Check "Generate random username" box if you want to set random yousername to new account
 * Copy api key and put it into "api key" box. e.g. for sms-activate.ru you can find api key in your [profile](https://sms-activate.ru/ru/profile)
 
 ## To-do
 
 * Add proxy support
 * Add protection from account lock
-* Add the ability to generate random username
 * Add other sms-activation services support
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Screenshots
-![Screenshot](https://i.imgur.com/PUD6jJi.png?raw=true "Optional Title")
-![Screenshot](https://i.imgur.com/v4Su1ht.png?raw=true "Optional Title")
+![Screenshot](https://i.imgur.com/ebXM2IS.png?raw=true "Optional Title")
+
 
 
 
