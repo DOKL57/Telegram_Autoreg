@@ -22,3 +22,15 @@ E:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.csproj.
 E:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.csproj.CopyComplete
 E:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.exe
 E:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.pdb
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\bin\Debug\Telegram_Autoreg.exe.config
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\bin\Debug\Telegram_Autoreg.exe
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\bin\Debug\Telegram_Autoreg.pdb
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\bin\Debug\SimWinMouse.dll
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.csprojAssemblyReference.cache
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.Form1.resources
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.Properties.Resources.resources
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.csproj.GenerateResource.cache
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.csproj.CoreCompileInputs.cache
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.csproj.CopyComplete
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.exe
+D:\Projects\Telegram_Autoreg\Telegram_Autoreg\obj\Debug\Telegram_Autoreg.pdb

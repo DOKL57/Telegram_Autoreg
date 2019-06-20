@@ -158,7 +158,7 @@ namespace Telegram_Autoreg
 
             IntPtr hWindow = FindWindow(null, "Telegram");
             MoveWindow(hWindow, 0, 0, 600, 600, true);
-
+            ct++;
             Sleep(1500);
             MoveWindow(hWindow, 0, 0, 600, 600, true);
             Sleep(1000);
@@ -356,6 +356,7 @@ namespace Telegram_Autoreg
                 Balance_Text.Text = "Wrong key";
             }
         }
+        int ct = 0;
         private void start_button_Click(object sender, EventArgs e)
         {
             //
@@ -370,8 +371,8 @@ namespace Telegram_Autoreg
                 GetBalance();
                 start();
             }
-            n = n / 2;
-            MessageBox.Show(n.ToString() + " Accounts registered");
+            if (ct != 0) {MessageBox.Show((n/2).ToString() + " Accounts registered"); }
+            
 
         }
 
